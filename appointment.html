@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Alpha Health Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Alpha Health</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="Symptom_check.html">Symptom Check</a>
+                    <a href="appointment.html" class="active">Appointments</a>
+                    <a href="articles.html">Health Articles</a>
+                    <a href="facilities.html">facilities</a>
+                    <a href="emergency.html">Emergency</a>
+                    <a href="login.html">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <p>Schedule a consultation with our healthcare professionals</p>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="appointment-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="appointmentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="1" max="120" required placeholder="Enter your age">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="appointmentDate">Appointment Date:</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentTime">Appointment Time:</label>
+                            <input type="time" id="appointmentTime" name="appointmentTime" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hospital">Select Hospital/Clinic:</label>
+                        <select id="hospital" name="hospital" required>
+                            <option value="">-- Choose a Facility --</option>
+                            <option value="City Medical Center">City Medical Center</option>
+                            <option value="Green Valley Hospital">Green Valley Hospital</option>
+                            <option value="Central Clinic">Central Clinic</option>
+                            <option value="Healthcare Plus">Healthcare Plus</option>
+                            <option value="District Hospital">District Hospital</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Department:</label>
+                        <select id="department" name="department" required>
+                            <option value="">-- Choose Department --</option>
+                            <option value="General Checkup">General Checkup</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Orthopedics">Orthopedics</option>
+                            <option value="Dermatology">Dermatology</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Pediatrics">Pediatrics</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="symptoms">Describe Your Symptoms/Reason for Visit:</label>
+                        <textarea id="symptoms" name="symptoms" rows="5" placeholder="Please describe your symptoms or reason for the appointment"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Book Appointment</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" style="display:none;">
+                    <div class="alert alert-success">
+                        <h3>Appointment Booked Successfully!</h3>
+                        <p>Thank you for booking an appointment with Alpha Health Solutions.</p>
+                        <div class="appointment-details">
+                            <p><strong>Confirmation will be sent to:</strong> <span id="confirmEmail"></span></p>
+                            <p><strong>Date:</strong> <span id="confirmDate"></span></p>
+                            <p><strong>Time:</strong> <span id="confirmTime"></span></p>
+                            <p><strong>Facility:</strong> <span id="confirmHospital"></span></p>
+                        </div>
+                        <p style="color: #666; margin-top: 20px;">You will receive a confirmation email shortly with appointment details.</p>
+                        <button class="btn btn-secondary" onclick="resetAppointmentForm()">Book Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Alpha Health Solutions provides comprehensive online healthcare support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email:alphahealthsolutions@gmail.com</p>
+                    <p>Phone: +256 743-182-927</p>
+                </div>
+            </div>
+            <div class="footer-bottom">J
+                <p> 2026 Alpha Health Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
